@@ -16,8 +16,8 @@ amount_two.addEventListener('input', calculateMoney)
 function calculateMoney() {
     const one = currency_one.value
     const two = currency_two.value
-    
-  
+
+
     let url = `https://v6.exchangerate-api.com/v6/9cbeb892b47b358355b34f7a/latest/${one}`
     fetch(url).then(res => res.json()).then(data => {
         // console.log(data);
@@ -25,6 +25,14 @@ function calculateMoney() {
         rateText.innerText = `${amount_one.value} ${one} = ${(amount_one.value * rate).toFixed(2)} ${two}`
         amount_two.value = ((amount_one.value * rate).toFixed(2))
     })
-
 }
+swap_btn.addEventListener('click', () => {
+    //USD => THB || THB => USD
+    //main_money => USD || THB = main_money(USD)
+    const main_money = currency_one.value //ต้นทาง
+    currency_one.value = currency_two.value
+    currency_two.value = main_money
+    calculateMoney()
+
+})
 calculateMoney()
