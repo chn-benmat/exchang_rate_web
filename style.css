@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+
+}
+
+body {
+    background: rgb(131, 5, 244);
+    background: linear-gradient(166deg, rgba(131, 5, 244, 1) 0%, rgba(133, 46, 222, 1) 29%, rgba(206, 94, 209, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin-right: 9px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    color: #fff;
+    background-color: #e02c77;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 12px;
+    border: none;
+}
+
+.money-img {
+    width: 415px;
+}
+
+.currency {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.currency select {
+    padding: 15px 25px 15px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    background: #f3f3f3;
+    appearance: none;
+}
+
+.currency input {
+    border: 0;
+    background: transparent;
+    font-size: 45px;
+    text-align: right;
+}
+
+.swap-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rate {
+    color: #fff;
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+}
